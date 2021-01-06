@@ -1,24 +1,4 @@
 # visual-drag-ts
 
-## Project setup
-```
-npm install
-```
+## 这是一个基于typescript + vue开发的支持可视化编辑、自由拖拽排版、实时预览的移动h5（画布可调）建站系统，类似于易企秀、兔展的h5在线制作编辑系统。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

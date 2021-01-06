@@ -3,6 +3,7 @@ node_modules
 /dist
 
 
+*.docx
 # local env files
 .env.local
 .env.*.local
