@@ -1,4 +1,5 @@
 module.exports = {
-  assetsDir: './ts-drag-h5/demopage/',
-  outputDir: 'demopage'
+  assetsDir: './',
+  outputDir: 'demopage',
+  publicPath: './ts-drag-h5/demopage/'
 }
