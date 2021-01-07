@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { deepCopy, swap, toast } from '@/utils/utils'
 import fileSaver from 'file-saver'
-import generateID from '@/utils/generateID'
+import generateID, { restoreId } from '@/utils/generateID'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -60,16 +60,19 @@ const store = new Vuex.Store({
     },
     saveAsJson(state, filename) {
       const copyState = deepCopy(state)
-      copyState.snapshotData = []
-      copyState.snapshotIndex = -1
+      copyState.snapshotData = [deepCopy(state.componentData)]
+      copyState.snapshotIndex = 0
       copyState.curComponent = null
       copyState.curComponentZIndex = -1
       const data = JSON.stringify(copyState)
       const blob = new Blob([data], { type: 'text/plain;charset=utf-8' })
       fileSaver.saveAs(blob, `${filename}.json`)
+      
     },
     restore(state, backup) {
       this.replaceState({ ...backup })
+      // 恢复公共id
+      restoreId()
       // this.state = { ...backup }
     },
     // 设置组件属性

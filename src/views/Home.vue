@@ -211,7 +211,7 @@ export default {
         const fileResult = res.target.result
         const backup = JSON.parse(fileResult)
         this.$store.commit('restore',backup)
-        console.log(backup)
+        // console.log(backup)
       }
       reader.readAsText(file)
     },
