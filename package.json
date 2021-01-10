@@ -1,5 +1,6 @@
 {
   "name": "visual-drag-ts",
+  "author": "@umr.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
